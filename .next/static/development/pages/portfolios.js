@@ -12796,7 +12796,7 @@ function (_React$Component) {
           key: index
         }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_10___default.a, {
           as: "/portfolio/".concat(post.id),
-          href: "/portfolio/[id] "
+          href: "/portfolio/[id]"
         }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
           style: {
             'fontSize': '30px'
