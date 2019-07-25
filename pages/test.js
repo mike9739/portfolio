@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import {withRouter} from 'next/router'
 import Axios from "axios";
 import BaseLayout from '../components/layouts/BaseLayout';
+import BasePage from '../components/BasePage';
 class Test extends Component {
     static async getInitialProps({query})
     {
@@ -15,8 +16,10 @@ class Test extends Component {
         const {testId} = this.props
         return (
             <BaseLayout>
-            
+            <BasePage>
             <h1>Im test page with id of {testId}</h1>
+            </BasePage>
+            
             </BaseLayout>
                 
         )

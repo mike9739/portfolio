@@ -3,36 +3,68 @@
 import React from "react"
 import Link from "next/link"
 import '../../styles/main.scss';
-import {Link as NextLink} from '../../routes'
-class Header extends React.Component{
-    render(){
-        debugger;
-        const title = this.props.title
-        return(
-        <React.Fragment>
-            <p>{title}</p>
-            {this.props.children}
-        <Link href="/"><a style={{fontSize:'20px'}}>Home</a></Link>
+import {
+    Collapse,
+    Navbar,
+    NavbarToggler,
+    NavbarBrand,
+    Nav,
+    NavItem,
+    NavLink,
+     } from 'reactstrap';
+//componente creado para reenderizar los botones de la navbar
+const BsNavLink = (props)=>{
+  const {route , title} = props
+  return(
+    <Link href={route}>
+      <a className="nav-link port-navbar-link" > {title}</a>
+    </Link>
 
-        <Link href="/about"><a>About</a></Link>
-        
-        <Link href="/blogs"><a>Blogs</a></Link>
-        
-        <Link href="/cv"><a>Curriculum</a></Link>
-        
-        <Link href="/portfolios"><a>Portfolios</a></Link>
-        <NextLink route="/test/1">Test 1 </NextLink> 
-        <NextLink route="test" params ={{id:'2'}}>Test 2 </NextLink>      
-        <style jsx>{`
-        a {
-         font-size:20px;
+
+  )
+}     
+class Header extends React.Component{
+    constructor(props) {
+        super(props);
+    
+        this.toggle = this.toggle.bind(this);
+        this.state = {
+          isOpen: false
         };
-        .CustomClass{
-            color:red;
-        }
-      `}</style>
-        </React.Fragment>     
-        )
-    }
+      }
+      toggle() {
+        this.setState({
+          isOpen: !this.state.isOpen
+        });
+      }
+      render() {
+        return (
+          <div>
+            <Navbar className="port-navbar port-default absolute" color="transparent" dark expand="md">
+              <NavbarBrand className="port-navbar-brand" href="/">MAVU</NavbarBrand>
+              <NavbarToggler onClick={this.toggle} />
+              <Collapse isOpen={this.state.isOpen} navbar>
+                <Nav className="ml-auto" navbar>
+                  <NavItem className="port-navbar-item">
+                    <BsNavLink route="/" title="Home" ></BsNavLink>
+                  </NavItem>
+                  <NavItem className="port-navbar-item">
+                    <BsNavLink route="/about" title="About" ></BsNavLink>
+                  </NavItem>
+                  <NavItem className="port-navbar-item">
+                    <BsNavLink route="/portfolios" title="Portfolios" ></BsNavLink>
+                  </NavItem>
+                  <NavItem className="port-navbar-item">
+                    <BsNavLink route="/blogs" title="Blog" ></BsNavLink>
+                  </NavItem>
+                  <NavItem className="port-navbar-item">
+                    <BsNavLink route="/cv" title="CV" ></BsNavLink>
+                  </NavItem>
+                </Nav>
+              </Collapse>
+            </Navbar>
+          </div>
+        );
+      }
 }
 export default Header;

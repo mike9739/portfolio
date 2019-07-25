@@ -1,11 +1,16 @@
 "use strict"
 import React from "react"
 import BaseLayout from "../components/layouts/BaseLayout";
+import BasePage from "../components/BasePage";
 class Index extends React.Component{
     render(){
         return(
             <BaseLayout>
-                <h1> Welcome to my cv</h1>
+
+            <BasePage>
+            <h1> Welcome to my cv</h1>
+            </BasePage>
+                
             </BaseLayout>
             
 
