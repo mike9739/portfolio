@@ -19,10 +19,21 @@ const BsNavLink = (props)=>{
     <Link href={route}>
       <a className="nav-link port-navbar-link" > {title}</a>
     </Link>
-
-
   )
-}     
+} 
+//componente creado para el login
+const Login = () =>{
+  return(
+
+    <span className="nav-link port-navbar-link clickable">Login</span>
+  )
+}    
+const Logout = () =>{
+  return(
+
+    <span className="nav-link port-navbar-link clickable">Logout</span>
+  )
+}    
 class Header extends React.Component{
     constructor(props) {
         super(props);
@@ -59,6 +70,12 @@ class Header extends React.Component{
                   </NavItem>
                   <NavItem className="port-navbar-item">
                     <BsNavLink route="/cv" title="CV" ></BsNavLink>
+                  </NavItem>
+                  <NavItem className="port-navbar-item">
+                    <Login></Login>
+                  </NavItem>
+                  <NavItem className="port-navbar-item">
+                    <Logout></Logout>
                   </NavItem>
                 </Nav>
               </Collapse>
