@@ -143,10 +143,14 @@
     .port-navbar.port-default .port-navbar-link:hover, .port-navbar.port-default .port-navbar-link:focus {
       color: #dba919; }
 
-html, body {
+html,
+body {
   height: 100%;
   width: 100%;
   font-family: 'Montserrat', 'Helvetica'; }
+
+.clickable {
+  cursor: pointer; }
 
 .self-typed {
   font-size: 31px;
