@@ -3,8 +3,8 @@ class Auth0 {
 
     constructor() {
         this.auth0 = new auth0.WebAuth({
-            domain: 'mike97.auth0.com',
-            clientID: 'cAaCJcZ7XfDuigc9BI5DpdAOfbxqQMGi',
+            domain: 'miguel97.auth0.com',
+            clientID: 'iLwGhCowBWuzoIFiYCvSXtu9JWw4LKC3',
             redirectUri: 'http://localhost:3000/callback',
             responseType: 'token id_token',
             scope: 'openid profile'
