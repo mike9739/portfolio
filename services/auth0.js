@@ -1,4 +1,5 @@
 import auth0 from "auth0-js";
+import Cookies from 'js-cookie'
 class Auth0 {
 
     constructor() {
@@ -10,7 +11,9 @@ class Auth0 {
             scope: 'openid profile'
         })
         this.login = this.login.bind(this)
+        this.logout = this.logout.bind(this)
         this.handleAuthentification = this.handleAuthentification.bind(this)
+        this.isAuthentificated = this.isAuthentificated.bind(this)
     }
     handleAuthentification() {
         return new Promise((resolve, reject) => {
@@ -26,13 +29,30 @@ class Auth0 {
         })
 
     }
-    setSession() {
-        //savetokens
+    setSession(authResult) {
+        let expiresAt = JSON.stringify((authResult.expiresIn * 1000)+new Date().getTime())
+        Cookies.set('user',authResult.idTokenPayload);
+        Cookies.set('jwt',authResult.idToken);
+        Cookies.set('expiresAt',auth.expiresAt);
 
     }
 
     login() {
         this.auth0.authorize();
+    }
+    logout(){
+        Cookies.remove('user',authResult.idTokenPayload);
+        Cookies.remove('jwt',authResult.idToken);
+        Cookies.remove('expiresAt',auth.expiresAt);
+        this.auth0.logout({
+            returnTo:'',
+            clientID:'iLwGhCowBWuzoIFiYCvSXtu9JWw4LKC3'
+        })
+    }
+    isAuthentificated(){
+        const expiresAt = Cookies.getJSON('expiresAt');
+        return new Date().getTime() < expiresAt
+
     }
 }
 
