@@ -13,7 +13,7 @@ class Callback extends React.Component{
 
     render(){
         return(
-            <BaseLayout>
+            <BaseLayout  {...this.props.auth}>
                 <BasePage>
                 <h1>Login plz wait</h1>
                 </BasePage>

@@ -33,7 +33,7 @@ class Auth0 {
         let expiresAt = JSON.stringify((authResult.expiresIn * 1000)+new Date().getTime())
         Cookies.set('user',authResult.idTokenPayload);
         Cookies.set('jwt',authResult.idToken);
-        Cookies.set('expiresAt',auth.expiresAt);
+        Cookies.set('expiresAt',expiresAt);
 
     }
 
@@ -41,9 +41,9 @@ class Auth0 {
         this.auth0.authorize();
     }
     logout(){
-        Cookies.remove('user',authResult.idTokenPayload);
-        Cookies.remove('jwt',authResult.idToken);
-        Cookies.remove('expiresAt',auth.expiresAt);
+        Cookies.remove('user');
+        Cookies.remove('jwt');
+        Cookies.remove('expiresAt');
         this.auth0.logout({
             returnTo:'',
             clientID:'iLwGhCowBWuzoIFiYCvSXtu9JWw4LKC3'
@@ -53,6 +53,19 @@ class Auth0 {
         const expiresAt = Cookies.getJSON('expiresAt');
         return new Date().getTime() < expiresAt
 
+    }
+    clientAuth(){
+        return this.isAuthentificated();
+    }
+    serverAuth(req){
+            if (req.headers.cookie) {
+                const expiresAtCookie = req.headers.cookie.split(';').find(c=>c.trim().startsWith('expiresAt='));
+               if (!expiresAtCookie) {
+                    return  undefined                  
+               } 
+               const expiresAt = expiresAtCookie.split('=')[1];
+               return new Date().getTime()<expiresAt;
+            } 
     }
 }
 

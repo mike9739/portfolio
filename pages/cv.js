@@ -7,7 +7,7 @@ class Index extends React.Component{
         return(
             <BaseLayout>
 
-            <BasePage>
+            <BasePage  {...this.props.auth}>
             <h1> Welcome to my cv</h1>
             </BasePage>
                 
