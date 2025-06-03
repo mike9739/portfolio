@@ -23,15 +23,15 @@ export const SkillSection = () => {
         { name: "Mongo", level: 95, category: "database" },
 
         //other
-        { name: "Git/GitHub", level: 90, category: "tools" },
-        { name: "Docker", level: 70, category: "tools" },
-        { name: "S3", level: 85, category: "tools" },
-        { name: "EC2", level: 95, category: "tools" },
+        { name: "Git/GitHub", level: 90, category: "other tools" },
+        { name: "Docker", level: 70, category: "other tools" },
+        { name: "S3", level: 85, category: "other tools" },
+        { name: "EC2", level: 95, category: "other tools" },
       ];
     
 
     const [activeCategory, setActiveCategory] = useState('all');
-    const categories = ['all','backend','frontend','database','tools'];
+    const categories = ['all','backend','frontend','database','other tools'];
     const filteredSkills = skills.filter((skill) => activeCategory === "all" ||  skill.category === activeCategory)
     return(
         <section id="skills" className="py-24 px-4 relative bg-secondary/30">

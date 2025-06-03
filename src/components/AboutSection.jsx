@@ -13,11 +13,10 @@ export const AboutSection = () => {
                     Fullstack Software Engineer
                 </h3>
                 <p className="text-muted-foreground">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias obcaecati ex nobis velit a animi temporibus ut enim blanditiis tempore! Voluptatibus, minima eum. Dignissimos, voluptatum enim omnis maiores corporis repellat?
+                My expertise lies in PHP (Laravel), Python (Django), and JavaScript, and I’ve built scalable, high-performance web applications for diverse industries. At Justia, I led projects like a REST API for personalized newsletter suggestions, which boosted subscriber growth by 200%, and a mass email system that streamlined marketing campaigns. Earlier roles at SMT and Qubit Studio Digital allowed me to develop ERPs, internal tools, and laboratory management software, collaborating closely with clients to deliver tailored solutions.
                 </p>
                 <p className="text-muted-foreground">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae quis iure consectetur at, molestiae sunt earum voluptatum accusantium, cupiditate beatae doloribus nesciunt tenetur possimus! Tenetur omnis error inventore necessitatibus dignissimos.
-                </p>
+                Beyond coding, I’m passionate about leveraging technology to solve real-world problems—whether automating workflows, integrating AI for case summaries, or optimizing databases. My background as a Computer Systems Engineer from Universidad De Guanajuato, combined with fluency in English and German, equips me to thrive in global teams. I’m always eager to take on challenges that push the boundaries of what’s possible with clean, efficient code. Let’s connect and build something great together!                </p>
                 <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
                     <a href="#contact" className="cosmic-button">Get In Touch</a>
                 </div>
@@ -31,7 +30,7 @@ export const AboutSection = () => {
                             <div className="text-left">
                                 <h4 className="font-bold text-lg">Justia</h4><span>Software Engineer II</span>
                                 <p className="text-muted-foreground">
-                                    safasfasfasfasfasfasfas
+                                    Tech Stack: Laravel , Python , React 
                                 </p>
                                 <p className="text-muted-foreground">
                                     January 2022 - January 2025
@@ -48,7 +47,8 @@ export const AboutSection = () => {
                             <div className="text-left">
                                 <h4 className="font-bold text-lg">Singular Design (Previously SMT)</h4><span>Fullstack Web Developer</span>
                                 <p className="text-muted-foreground">
-                                    safasfasfasfasfasfasfas
+                                Tech Stack: Laravel , Django , React , Vue
+
                                 </p>
                                 <p className="text-muted-foreground">
                                     January 2022 - January 2025
@@ -66,7 +66,7 @@ export const AboutSection = () => {
                             <div className="text-left">
                                 <h4 className="font-bold text-lg">Qubit Studio Digital</h4><span>Fullstack Web Developer</span>
                                 <p className="text-muted-foreground">
-                                    safasfasfasfasfasfasfas
+                                Tech Stack: Laravel, Vue
                                 </p>
                                 <p className="text-muted-foreground">
                                     January 2022 - January 2025

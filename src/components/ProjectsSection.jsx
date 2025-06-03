@@ -13,16 +13,16 @@ const projects = [
     {
         id: 2,
         title: "ZUMA",
-        description: "A free service to get summaries of the US supreme courts to your email. Powered by IA",
+        description: "A CRM build with Django and Angular to process orders and routes from retailers",
         image: "/projects/project_2.png",
-        tags: ["Angular", "Laravel", "Python"],
+        tags: ["Angular", "Django"],
         demoUrl: "https://zuma.com.gt",
         githubUrl: null
       },
     {
         id: 3,
         title: "Mr Menu",
-        description: "A free service to get summaries of the US supreme courts to your email. Powered by IA",
+        description: "A social network for foodies",
         image: "/projects/project_3.png",
         tags: ["Django", "Vue", "Python"],
         demoUrl: "https://mrmenu.co/",
@@ -31,7 +31,7 @@ const projects = [
     {
         id: 4,
         title: "Bitlab",
-        description: "A free service to get summaries of the US supreme courts to your email. Powered by IA",
+        description: "A SasS , build for hospitals and laboratories, in helps to handle patient studies, create reports and notify the results to the users",
         image: "/projects/project_4.png",
         tags: ["Laravel", "Vue"],
         demoUrl: "https://bitlabsoft.com",
